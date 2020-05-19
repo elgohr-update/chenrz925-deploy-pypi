@@ -16,8 +16,8 @@ if [[ -n "$INPUT_URL" ]]; then
 fi
 
 if [[ "$INPUT_BUILD" == true ]]; then
-  python -m twine check dist/*
   python setup.py sdist bdist_wheel
+  python -m twine check dist/*
 fi
 
 TWINE_USERNAME="$INPUT_USER" TWINE_PASSWORD="$INPUT_PASSWORD" \
