@@ -16,7 +16,7 @@ if [[ -n "$INPUT_URL" ]]; then
 fi
 
 if [[ "$INPUT_BUILD" == true ]]; then
-  python setup.py sdist bdist_wheel
+  python setup.py sdist bdist_wheel bdist_egg
   python -m twine check dist/*
 fi
 
