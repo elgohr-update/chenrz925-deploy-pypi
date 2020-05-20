@@ -1,1 +1,1 @@
-FROM docker.pkg.github.com/casperdcl/deploy-pypi/deploy-pypi:latest
+FROM waterch/deploy-pypi:latest
