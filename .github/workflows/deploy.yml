@@ -13,7 +13,7 @@ jobs:
         id: get_tag
         run: echo ::set-output name=tag::${GITHUB_REF/refs\/tags\//}
       - name: Deploy Docker
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: ${{ github.actor }}/deploy-pypi/deploy-pypi
           tags: latest,${{ steps.get_tag.outputs.tag }}
